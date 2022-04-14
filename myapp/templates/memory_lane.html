@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="eternal-head" id="">ETERNALS</h1>
+{% if current_user.is_authenticated %}
+    <div class="jumbotron">
+        <h1>MEMORY LANE</h1>
+    </div>
+    <div class="container">
+        {% for post in blog_posts.items %}
+            <div class="card">
+                <div class="car-boy">
+                    <h2>
+                        <a class="card-title" href="{{url_for('blog_posts.blog_post', blog_post_id=post.id)}}">"{{post.title}}"</a><br>
+                        <a href="{{url_for('users.user_posts', username=post.author.username)}}">Shared by: {{post.author.username}}</a>
+                    </h2>
+                    <p class="text-muted">Eternalized on: {{ post.date.strftime('%B %d, %Y') }}</p>
+                    <a class="btn btn-primary" href="{{url_for('blog_posts.blog_post', blog_post_id=post.id)}}">Read Memory</a>
+                </div>
+            </div>
+            {% else %}
+            <div class="jumbotron">
+                <h1>Eternals is for those who wish to never forget.</h1>
+                <h2>For the hopless nostalgic...</h2>
+                <h3>For the day-dreamer...</h3>
+                <p>Eternals offers a space for families, friends, and strangers alike to share memories of one another, for one another.</p>
+            </div>
+
+        {% endfor %}
+    </div>
+    
+
+    <nav aria-label="Page Navigation example">
+        <ul class="pagination justify-content-center">
+            {% for page_num in blog_posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+                {% if blog_posts.page == page_num %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="{{url_for('core.index', page=page_num)}}">{{ page_num }}</a>
+                </li>
+                {% else %}
+                <li class="page-item">
+                    <a class="page-link" href="{{url_for('core.index', page=page_num)}}">{{ page_num }}</a>
+                </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+    {% endif %}
+{% endblock %}

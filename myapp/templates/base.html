@@ -13,16 +13,18 @@
     <title>Eternals</title>
 </head>
 <body>
-    <h1 class="eternal-head" id="">ETERNALS</h1>
+    
     <ul class="nav">
+        {% if current_user.is_authenticated %}
         <li class="nav-link">
             <a href="{{url_for('core.index')}}">HOME</a>
         </li>
         <li class="nav-link">
+            <a href="{{url_for('core.posts')}}">MEMORY LANE</a>
+        </li>
+        <li class="nav-link">
             <a href="{{url_for('core.info')}}">ABOUT</a>
         </li>
-
-        {% if current_user.is_authenticated %}
         <li class="nav-link">
             <a href="{{url_for('blog_posts.create_post')}}">SHARE A MEMORY</a> 
         </li>
@@ -34,10 +36,10 @@
         </li>
         {% else %}
         <li class="nav-link">
-            <a href="{{url_for('users.login')}}">LOGIN</a>
+            <a class="main-link" href="{{url_for('users.login')}}">LOGIN</a>
         </li>
         <li class="nav-link">
-            <a href="{{url_for('users.register')}}">REGISTER</a>
+            <a class="main-link" href="{{url_for('users.register')}}">REGISTER</a>
         </li>
         {% endif %}
     </ul>
