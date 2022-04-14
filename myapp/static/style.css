@@ -1,14 +1,26 @@
+body {
+  background-color: rgb(238, 233, 188);
+}
+
 h1 {
   text-align: center;
   margin-top: 40px;
 }
 
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
 h1.eternal-head {
   text-align: center;
-  color: white;
+  color: rgb(227, 220, 159);
   font-size: 80px;
   margin: 0 auto;
-
+  font-family: 'Playfair Display SC', serif;
   line-height: 5;
   background-image: url(https://www.bibleverses.com/wp-content/uploads/2018/09/bible-verses-about-death.jpg);
   background-size:cover;
@@ -16,11 +28,12 @@ h1.eternal-head {
 }
 
 ul.nav {
-
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: black;
   font-size: bold;
-  margin: 10px 30px 0px 30px;
+  
   padding: 0;
 }
 
@@ -28,9 +41,9 @@ ul.nav {
   list-style-type: none;
   margin: 10px;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
-  display:inline-flex;
-  text-align: center;
-  color: navy;
+  display: flex;
+
+  
 }
 
 .nav a {
@@ -45,18 +58,24 @@ ul.nav {
   text-decoration: none;
 }
 
+div.jumbotron {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 div.container {
   text-align: center;
 }
 
 div.card {
-  display: inline flex;
+  display: grid;
   text-decoration: none;
+  margin: 10px;
+  
 }
 
 div.car-boy {
-  border: 5px solid black;
-  background-image: url("https://imgur.com/kXmBdqj");
+  
   margin: 15px 60px 15px 60px;
   
 }
@@ -66,12 +85,14 @@ a.card-title {
 }
 
 a {
+  
   text-decoration: none;
   color: black;
+
 }
 
 a.btn.btn-primary {
-  text-decoration: underline;
+  background-color: #7eafaf;
 }
 
 a.page-link {
