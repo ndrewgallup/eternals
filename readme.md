@@ -8,7 +8,7 @@ This app was conceptualized, designed, and coded by [Andrew Gallop](https://gith
 
 ## Getting Started
 
-**Check out the deployed application [here](https://main--app-pilot.netlify.app/)**
+**Check out the deployed application [here](https://eternals-app.herokuapp.com/)**
 
 ![](myapp/static/eternals.png)
 
