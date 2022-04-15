@@ -3,7 +3,7 @@ from myapp.models import BlogPost
 
 core = Blueprint('core', __name__)
 
-@core.route('/index')
+@core.route('/')
 def index():
     return render_template('index.html')
 

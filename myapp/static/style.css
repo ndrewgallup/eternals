@@ -13,11 +13,16 @@ h2 {
 
 h3 {
   font-size: 20px;
+  border-bottom: 2px solid grey;
+}
+
+p {
+  font-size: 20px;
 }
 
 h1.eternal-main {
   text-align: center;
-  color: rgb(227, 220, 159);
+  color: rgb(227, 218, 134);
   font-size: 100px;
   margin: 0 auto;
   font-family: 'Playfair Display SC', serif;
@@ -37,9 +42,15 @@ h1.eternal-head {
   line-height: 4;
   background-image: url(https://www.bibleverses.com/wp-content/uploads/2018/09/bible-verses-about-death.jpg);
   background-size:cover;
-  border-bottom: 4px solid grey;
+  border: 4px solid grey;
   
 }
+
+span {
+  font-size: 40px;
+}
+
+
 
 ul.nav {
   display: flex;
@@ -54,7 +65,7 @@ ul.nav {
 .nav-link{
   list-style-type: none;
   margin: 10px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Playfair Display SC', serif;
   display: flex;
 }
 
@@ -80,17 +91,23 @@ a.main-link {
 div.jumbotron {
   text-align: center;
   margin-bottom: 30px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+div.form-group {
+  margin: 20px;
 }
 
 div.container {
   text-align: center;
-  
+  font-family: 'Cormorant Garamond', serif;
 }
 
 div.card {
   display: grid;
   text-decoration: none;
   margin: 10px;
+  font-family: 'Cormorant Garamond', serif;
   
 }
 
@@ -102,27 +119,81 @@ div.car-boy {
 
 a.card-title {
   text-align: left;
+  font-size: 24px;
+}
+
+p.text-muted {
+  font-size: 16px;
 }
 
 a {
-  
+  font-size: 20px;
   text-decoration: none;
   color: black;
 
 }
 
+#submit.btn.btn-primary {
+  background-color: #7eafaf;
+  margin: 15px;
+  font-family: 'Cormorant Garamond', serif;
+  
+  
+
+}
+
+#submit {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  background-color: #7eafaf;
+}
+
+#submit.btn.btn-outline-info {
+  background-color: #7eafaf;
+  font-family: 'Cormorant Garamond', serif;
+}
+
 a.btn.btn-primary {
   background-color: #7eafaf;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+a.btn.btn-secondary {
+  margin: 10px;
+  background-color: #7eafaf;
+}
+
+input.btn.btn-danger {
+  background-color: rgb(217, 138, 138);
 }
 
 a.page-link {
   text-decoration: underline;
 }
 
-.registerform {
+.registerform, .login-form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin: 2%;
+  margin: 8%;
   border: .2rem solid #007397;
   padding: 1%;
+  font-family: 'Cormorant Garamond', serif;
+  
 }
+
+.login-form > *, .registerform > * {
+  margin: .5%;
+  padding: 1%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  
+}
+

@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
+<h1 class="eternal-head" id="">ETERNALS</h1>
 <div class="jumbotron">
   <h1>"{{ post.title }}"</h1>
   <h2>Shared by: {{post.author.username}}</h2>
   <h3>Eternalized: {{ post.date.strftime('%B %d, %Y') }}</h3>
   <p>{{post.text}}</p>
    {% if post.author == current_user %}
-     <div>
+     <div class="buttons">
        <a class="btn btn-secondary" href="{{ url_for('blog_posts.update', blog_post_id=post.id) }}">Update</a>
        <br>
        <form action="{{ url_for('blog_posts.delete_post', blog_post_id=post.id) }}" method="POST">

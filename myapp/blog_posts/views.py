@@ -17,7 +17,7 @@ def create_post():
     db.session.commit()
     flash('Memory Created')
     print('Memory created')
-    return redirect(url_for('core.index'))
+    return redirect(url_for('core.posts'))
   return render_template('create_post.html', form=form)
 
 #view single

@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
+<h1 class="eternal-head" id="">ETERNALS</h1>
+<h1>Share A Memory</h1>
     <div class="container">
       <form class="form-group" method="POST">
           {{form.hidden_tag()}}
@@ -13,7 +15,7 @@
             {{form.text(class="form-control form-control-lg")}}
         </div>
         <div class="form-group">
-            {{form.submit(class="btn btn-outline-info")}}
+            {{form.submit(class="btn btn-primary")}}
         </div>
       </form>
     </div>
